@@ -127,11 +127,13 @@ a:active, #bootplate-credit p a:active{}
 .navbar-default li.highlight a{color:#eee; background-color:#34A853;}
 .navbar-inverse li.highlight a:hover, .navbar-inverse .navbar-nav > .highlight > a:hover{color:#eee; background-color:#2cae4e; background:#2cae4e;}
 .navbar-default li.highlight a:hover, .navbar-default .navbar-nav > .highlight > a:hover{color:#eee; background-color:#2cae4e; background:#2cae4e;}
+.pagination > li > a, .pagination > li > span{color: #6f5499;}
+.pagination > li > span.current {background-color: #6f5499;    border-color: #6f5499;    color: #fff;    cursor: default;    z-index: 3;}
+.pagination > li > a:focus,.pagination > li > a:hover,.pagination > li > span:focus,.pagination > li > span:hover {  color: #563d7c;}
 
 /* Primary: #4284F3 */
 .bg-primary {color: #fff;  background-color:#4284F3;}
 .sidebar ul.menu li.current_page_item a, .sidebar ul.menu li.current_page_item a:hover, .sidebar ul.menu li.current_page_item a:focus{z-index: 2;  color: #ffffff;  background-color: #4284F3;  border-color: #4284F3;}
-.pagination > li > span.current {background-color: #4284F3;    border-color: #4284F3;    color: #fff;    cursor: default;    z-index: 3;}
 .jumbotron.bg-primary {background-color:#4284F3;}
 .jumbotron.bg-primary p{color:rgba(255,255,255,0.7);}
 a.bg-primary:hover,a.bg-primary:focus {  background-color: #286090;}
@@ -158,6 +160,8 @@ fieldset[disabled] .btn-primary.focus {  background-color: #4284F3;  border-colo
 .pagination > li > a,.pagination > li > span {color: #4284F3;background-color: #fff;  border: 1px solid #ddd}
 .label-primary {  background-color: #4284F3;}
 .label-primary[href]:hover,.label-primary[href]:focus {  background-color: #286090;}
+.btn-primary-outline {background-color: transparent;    background-image: none;    border-color: #0275d8;    color: #0275d8;}
+.btn-primary-outline:hover {background-color: transparent;    background-image: none;    border-color: #122b40;    color: #122b40; text-decoration:none;}
 .list-group-item.active > .badge,.nav-pills > .active > a > .badge {  color: #4284F3;  background-color: #fff;}
 a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active {  border-color: #4284F3;}
 .list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus {  color: #fff;  background-color: #4284F3;  border-color: #4284F3;}
