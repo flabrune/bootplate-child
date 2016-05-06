@@ -1,6 +1,6 @@
 <?php
 // Bootplate Child Starter Functions
-// v0.3
+// v0.4
 
 // Setup Stylesheet(s)
 function childplate_enqueue_styles() {
@@ -16,6 +16,9 @@ function childplate_enqueue_styles() {
 	
 	if( get_theme_mod( 'minify_bootplate_css', 'unmin-bootplate-css' ) == 'min-bootplate-css') {$mincss = true;} else { $mincss = false; }
 	if( get_theme_mod( 'minify_bootplate_js', 'unmin-bootplate-js' ) == 'min-bootplate-js') {$minjs = true;} else { $minjs = false; }
+	
+	// Google Font enqueue Example	
+	//wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Raleway:400,300,700');
 	
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), null, 'all' );
 	
@@ -46,25 +49,9 @@ add_action( 'wp_enqueue_scripts', 'childplate_enqueue_styles' );
 
 
 // LoadCSS - Async Load of body.css (below the fold styles)
-if(!function_exists('bootplate_async_css')) {
-	function bootplate_async_css() {
-		$tempdir = get_stylesheet_directory_uri();
-		
-		if(get_theme_mod( 'minify_bootplate_css', 'unmin-bootplate-css' ) == 'min-bootplate-css') {$bodycss = 'body.min.css';} else {$bodycss = 'body.css';}
-		if(get_theme_mod( 'minify_bootplate_js', 'unmin-bootplate-js' ) == 'min-bootplate-js') {$loadcss = 'loadcss.min.js';} else {$loadcss = 'loadcss.js';}
-		
-		echo '
-		<link rel="preload" href="'.$tempdir.'/css/'.$bodycss.'" as="style" onload="this.rel=\'stylesheet\'" type="text/css" />
-		<noscript><link rel="stylesheet" href="'.$tempdir.'/css/'.$bodycss.'" type="text/css" /></noscript>
-		<script src="'.$tempdir.'/js/'.$loadcss.'" type="text/javascript"></script>
-		';
-	}
-}
+// Removed.  See: https://github.com/jdmdigital/bootplate/issues/82 
 
-
-
-
-// Setup Custom Scripts
+// Setup Custom JS Scripts
 function childplate_enqueue_scripts() {
 
 	wp_deregister_script( 'jquery' );
