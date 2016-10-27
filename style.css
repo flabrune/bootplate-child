@@ -2,7 +2,7 @@
 Theme Name: 		ChildPlate
 Theme URI: 			http://bootplate.jdmdigital.co/childplate/
 Description: 		A (mostly) BLANK starter child theme for Bootplate.
-Version: 			0.4
+Version: 			0.5
 License: 			GNU General Public License v2 or later
 License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
 Author: 			JDM Digital
@@ -401,7 +401,6 @@ a.list-group-item-info.active,button.list-group-item-info.active,a.list-group-it
 	Min-Width: Refers to everything greater than or equal to the amount given.
 	Max-Width: Refers to everything less than or equal to the amount given. 
 */
-
 /* == xSmall-only == */
 @media only screen and (max-width : 329px) {
 	
@@ -409,34 +408,40 @@ a.list-group-item-info.active,button.list-group-item-info.active,a.list-group-it
 
 /* == Small-only == */
 @media only screen and (max-width : 480px) {
-	
+	.full-height.vh66 .container{margin-top:3vh;}
 }
 
 /* == iPhone Retina == */ 
 @media only screen and (min-width : 320px) {
-	
+
 }
 
 /* == Extra Small Devices, Phones == */ 
 @media only screen and (min-width : 480px) {
-	
+
 }
 
 /* == Small Devices, Tablets == */
 @media only screen and (min-width : 768px) {
-	
+	.category article.post {min-height: 630px;}
+	#bootplate-credit{letter-spacing:1px;}
+	.full-height.vh66 .container{margin-top:6vh;}
+	.home .jumbotron h1, .home .jumbotron .h1{font-size: 60px;}
 }
 
 /* == Medium Devices, Desktops == */
 @media only screen and (min-width : 992px) {
-	
+	.page-template-page-search header.full-height{background-size:cover; background-repeat:no-repeat;}
+	.full-height.vh66 .container{margin-top:8vh;}
 }
 
 /* == Extra Large Devices, Wide Screens == */
 @media only screen and (min-width : 1200px) {
-	
+	.full-height.vh66 .container{margin-top:10vh;}
 	
 }
+
+.hamburger-cross .navbar-toggler:focus, .hamburger-cross .navbar-toggler:hover{background-color:transparent;}
 
 /* == Narrow Height Viewport Styles == */
 @media (max-height: 720px) and (min-width: 970px) {
